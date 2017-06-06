@@ -23,6 +23,8 @@ class PYROSIM:
 	dt 		   : float, optional
 		The time in seconds between physics world steps. Larger dt values create more unstable
 		physics. (the default is 0.05)
+	gravity    : float, optional
+		The gravity in the simulation (the default is -0.5).
 	xyz		   : list of 3 floats
 		The xyz position of the camera (default is [0.8317,-0.9817,0.8000])
 	hpr
@@ -32,6 +34,7 @@ class PYROSIM:
 		(the default is False)
 	"""
 	def __init__(self,playBlind=False,playPaused=False,evalTime=constants.evaluation_time,
+					gravity=constants.gravity,
 					dt=constants.dt, xyz=constants.xyz, hpr=constants.hpr, debug=False):
 
 		self.numJoints = 0
@@ -44,6 +47,7 @@ class PYROSIM:
 		self.playPaused = playPaused
 		self.playBlind = playBlind
 		self.debug = debug
+		self.gravity = gravity
 		# self.simulator = Popen(commandsToSend, stdout=PIPE, stdin=PIPE)
 
 		if (self.playPaused == True and self.playBlind == True):
@@ -51,6 +55,7 @@ class PYROSIM:
 
 		self._Send('EvaluationTime '+str(evalTime)+'\n')
 		self._Send('TimeInterval ' + str(self.dt)+'\n')
+		self._Send('Gravity ' + str(self.gravity)+'\n')
 		self.Send_Camera(xyz, hpr)
 
 	def Get_Sensor_Data(self,sensorID=0,svi=0):

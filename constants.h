@@ -21,6 +21,7 @@ int	MAX_SYNAPSES	= 1000000;
 
 int	BOX		= 0;
 int	CYLINDER	= 1;
+int SPHERE = 2;
 
 #endif
 

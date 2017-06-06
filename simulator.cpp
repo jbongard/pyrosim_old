@@ -30,6 +30,8 @@ int runBlind;
 ENVIRONMENT *environment;
 int numberOfBodies = 0;
 float dt = 0.05;
+float gravity = -0.5;
+
 static float xyz[3] = {0.8317f,-0.9817f,0.8000f};
 static float hpr[3] = {121.0000f,-27.5000f,0.0000f};
 
@@ -192,7 +194,7 @@ void Initialize_ODE(void) {
   	world = dWorldCreate();
   	space = dHashSpaceCreate (0);
   	contactgroup = dJointGroupCreate (0);
-  	dWorldSetGravity (world,0,0,-0.5);
+  	dWorldSetGravity (world,0,0,gravity);
   	ground = dCreatePlane (space,0,0,1,0);
  
 	dGeomSetData(ground,NULL); 
@@ -207,7 +209,7 @@ void Initialize_Environment(void) {
 
 void Read_From_Python(void) {
 
-	environment->Read_From_Python(world,space,&evaluationTime,&dt,xyz,hpr);
+	environment->Read_From_Python(world,space,&evaluationTime,&dt, &gravity,xyz,hpr);
 }
 
 void Terminate(void) {

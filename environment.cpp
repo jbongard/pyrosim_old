@@ -41,8 +41,9 @@ void ENVIRONMENT::Draw(void) {
                 objects[i]->Draw();
 }
 
-void ENVIRONMENT::Read_From_Python(dWorldID world,dSpaceID space, int *evaluationTime,
-                                        float *dt, float *xyz, float *hpr) {
+void ENVIRONMENT::Read_From_Python(dWorldID world,dSpaceID space, 
+                                int *evaluationTime, float *dt, float *gravity,
+                                float *xyz, float *hpr) {
 
         char incomingString[100];
 
@@ -69,6 +70,9 @@ void ENVIRONMENT::Read_From_Python(dWorldID world,dSpaceID space, int *evaluatio
                         std::cin >> hpr[2];
                 }
 
+                else if ( strcmp(incomingString,"Gravity") == 0)
+                        std::cin >> (*gravity);
+        
                 //Bodies
                 else if ( strcmp(incomingString,"Box") == 0 )
 

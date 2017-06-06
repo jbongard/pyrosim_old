@@ -1,0 +1,39 @@
+\begin{theindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter G
+  \item Get\_Sensor\_Data() (pyrosim.PYROSIM method), \hyperpage{3}
+
+  \indexspace
+  \bigletter P
+  \item PYROSIM (class in pyrosim), \hyperpage{3}
+  \item pyrosim (module), \hyperpage{3}
+
+  \indexspace
+  \bigletter S
+  \item Send\_Bias\_Neuron() (pyrosim.PYROSIM method), \hyperpage{3}
+  \item Send\_Box() (pyrosim.PYROSIM method), \hyperpage{4}
+  \item Send\_Camera() (pyrosim.PYROSIM method), \hyperpage{4}
+  \item Send\_Cylinder() (pyrosim.PYROSIM method), \hyperpage{4}
+  \item Send\_Developing\_Synapse() (pyrosim.PYROSIM method), \hyperpage{5}
+  \item Send\_Function\_Neuron() (pyrosim.PYROSIM method), \hyperpage{6}
+  \item Send\_Hidden\_Neuron() (pyrosim.PYROSIM method), \hyperpage{6}
+  \item Send\_Joint() (pyrosim.PYROSIM method), \hyperpage{6}
+  \item Send\_Light\_Sensor() (pyrosim.PYROSIM method), \hyperpage{7}
+  \item Send\_Light\_Source() (pyrosim.PYROSIM method), \hyperpage{8}
+  \item Send\_Motor\_Neuron() (pyrosim.PYROSIM method), \hyperpage{8}
+  \item Send\_Position\_Sensor() (pyrosim.PYROSIM method), \hyperpage{8}
+  \item Send\_Proprioceptive\_Sensor() (pyrosim.PYROSIM method), \hyperpage{8}
+  \item Send\_Ray\_Sensor() (pyrosim.PYROSIM method), \hyperpage{9}
+  \item Send\_Sensor\_Neuron() (pyrosim.PYROSIM method), \hyperpage{9}
+  \item Send\_Synapse() (pyrosim.PYROSIM method), \hyperpage{10}
+  \item Send\_Touch\_Sensor() (pyrosim.PYROSIM method), \hyperpage{10}
+  \item Send\_User\_Input\_Neuron() (pyrosim.PYROSIM method), \hyperpage{10}
+  \item Send\_Vestibular\_Sensor() (pyrosim.PYROSIM method), \hyperpage{10}
+  \item Start() (pyrosim.PYROSIM method), \hyperpage{11}
+
+  \indexspace
+  \bigletter W
+  \item Wait\_To\_Finish() (pyrosim.PYROSIM method), \hyperpage{11}
+
+\end{theindex}
